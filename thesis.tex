@@ -1,0 +1,89 @@
+\documentclass[%
+specialist,     % тип документа
+subf,           % подключить и настроить пакет subfig для вложенной нумерации рисунков
+href,           % подключить и настроить пакет hyperref
+colorlinks=true % цветные гиперссылки
+%,times         % шрифт Times как основной
+%,fixint=false  % отключить прямые знаки интегралов
+]{disser}
+
+\usepackage[
+  a4paper, mag=1000,
+  left=2.5cm, right=1cm, top=2cm, bottom=2cm, headsep=0.7cm, footskip=1cm
+]{geometry}
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\ifpdf\usepackage{epstopdf}\fi
+
+% Номера страниц снизу и по центру
+%\pagestyle{footcenter}
+%\chapterpagestyle{footcenter}
+
+% Точка с запятой в качестве разделителя между номерами цитирований
+%\setcitestyle{semicolon}
+
+% Использовать полужирное начертание для векторов
+\let\vec=\mathbf
+
+% Включать подсекции в оглавление
+\setcounter{tocdepth}{2}
+
+%----------------------------------------------------------------
+\begin{document}
+
+%
+% Титульный лист на русском языке
+%
+
+% Название организации
+\institution{Московский государственный университет геодезии и картографии}
+
+% Имя лица, допускающего к защите (зав. кафедрой)
+\apname{к.\,т.\,н.\, доцент А. В. Кононов}
+
+\title{Дипломная работа}
+
+% Тема
+\topic{Разработка платформы виртуализации и моделирования сетей TCP/IP на базе OpenStack и dynamips}
+
+% Группа
+\group{Студента группы ИСИТ V-1с}
+% Автор
+\author{Соколов Николай Валерьевич}
+
+% Научный руководитель
+\sa       {И.\,Н.~Кондауров}
+\sastatus {к.\,т.\,н., доцент}
+
+% Рецензент
+% \rev      {П.\,П.~Петров}
+% \revstatus{к.\,ф.-м.\,н., доцент}
+
+% Город и год
+\city{Москва}
+\date{\number\year}
+
+\maketitle
+
+% Содержание
+\tableofcontents
+
+% Введение
+\input{intro}
+
+%\input{1}
+%\input{2}
+%\input{3}
+\setcounter{chapter}{3}
+\input{4}
+
+% Заключение
+\input{concl}
+
+% Список литературы
+\bibliography{thesis}
+\bibliographystyle{gost705}
+
+\end{document}
