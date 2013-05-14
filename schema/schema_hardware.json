@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "description": "Available device types",
+  "type": "object",
+  "links": [{
+    "rel": "self",
+    "href": "/{tenant}/devices"}],
+  "properties": {
+    "devices": {
+      "type": "object",
+      "additionalProperties": {
+        "id": {"type": "string", "required": true},
+        "name": {"type": "string", "required": true},
+        "metadata": {"type": "object", "required": true},
+        "software": {
+          "type": "array",
+          "required": true,
+          "description": "Supported OSes for this hardware",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {"type": "string", "required": true},
+              "id": {"type": "string", "required": true}}}},
+        "parameters": {
+            "type": "object",
+            "required": true,
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "required": true},
+                "description": {
+                  "type": "string",
+                  "required": true},
+                "default": {
+                  "required": true}}}},
+        "slots": {
+          "type": "array",
+          "required": true,
+          "items": {
+            "model": {
+              "type": ["null", "string"],
+              "required": true},
+            "editable": false,
+            "supported": {
+              "type": "array",
+              "required": true,
+              "description": "Supported NIC types",
+              "items": {"type": "string"}}}}}}}}}

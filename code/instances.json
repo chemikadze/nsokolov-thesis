@@ -1,0 +1,36 @@
+{
+  "devices": [
+    {
+      "id": "R1",
+      "name": "Router 1",
+      "hardware": "C2000",
+      "software": "Centos 6.0",
+      "parameters": {},
+      "slots": [
+        {
+          "model": "S2000",
+          "editable": false,
+          "parameters": {"bufferSize": 512}},
+        {
+          "model": "E2000",
+          "editable": true,
+          "parameters": {}}],
+      "metadata": {"position": {"x": 123, "y": 100}}},
+    {
+      "id": "R2",
+      "name": "Computer",
+      "hardware": "VM",
+      "parameters": {"memory": 1024},
+      "slots": [
+        {
+          "id": 0,
+          "model": "Realtek",
+          "editable": false,
+          "parameters": {}}],
+      "metadata": {"position": {"x": 200, "y": 200}}}],
+  "wires": [
+      {
+        "id": "R1_0_0-R2_0_0",
+        "left": {"device": "R1", "slot": 0, "port": 0},
+        "right": {"device": "R2", "slot": 0, "port": 0}
+      }]}

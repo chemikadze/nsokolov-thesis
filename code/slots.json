@@ -1,0 +1,8 @@
+{
+  "cards": {
+    "Realtek": {
+      "model": "Realtek",
+      "ports": [{"type": "FastEthernet", "count": 1}]},
+    "E2000": {
+      "model": "E2000",
+      "ports": [{"type": "Ethernet","count": 10}]}}}

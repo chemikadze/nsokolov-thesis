@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "description": "Available network cards",
+  "type": "object",
+  "links": [{
+      "rel": "self",
+      "href": "/{tenant}/cards"}],
+  "properties": {
+    "cards": {
+      "type": "object",
+      "required": true,
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "type": "string",
+            "required": true},
+          "ports": {
+            "type": "array",
+            "required": true,
+            "items": {
+              "type": {
+                "type": "string",
+                "required": true},
+              "count": {
+                "type": "integer",
+                "required": true,
+                "minimum": 0}}}}}}}}

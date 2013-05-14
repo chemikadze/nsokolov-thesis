@@ -1,0 +1,35 @@
+{
+  "devices": {
+    "VM": {
+      "id": "VM",
+      "name": "Virtual Machine",
+      "metadata": {"pictogram": {"url": "/img/vm.png"}},
+      "parameters": {
+        "memory": {
+          "type": "integer",
+          "description": "Memory (MB)",
+          "default": "256"}},
+      "software": [
+      	{"name": "Centos 6.0", "id": "1"},
+      	{"name": "Ubuntu 10.04", "id": "2"}],
+      "slots": [
+        {
+          "model": "Realtek",
+          "editable": false,
+          "supported": ["Realtek"]}]},
+    "C2000": {
+      "id": "C2000",
+      "name": "Cisco C2000",
+      "metadata": {},
+      "parameters": {},
+      "software": [
+      	{"name": "IOS 12.1", "id": "3"}],
+      "slots": [
+        {
+          "model": "E2000",
+          "supported": ["E2000"],
+          "editable": false},
+        {
+          "model": null,
+          "supported": ["E2000", "E2100"],
+          "editable": true}]}}}
