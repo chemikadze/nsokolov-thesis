@@ -19,10 +19,7 @@
       "method": "DELETE"},
     {
       "rel": "webconsole",
-      "href": "/{tenant}/instances/{id}/webconsole/{deviceId}",
-      "targetSchema": {
-        "properties": {
-          "url": {"type": "string", "required": true}}}}],
+      "href": "/{tenant}/instances/{id}/webconsole/{deviceId}"}],
   "properties": {
     "id": {"type": "string", "required": true},
     "devices": {
