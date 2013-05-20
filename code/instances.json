@@ -4,7 +4,7 @@
       "id": "R1",
       "name": "Router 1",
       "hardware": "C2000",
-      "software": "Centos 6.0",
+      "software": "3",
       "parameters": {},
       "slots": [
         {
@@ -20,10 +20,10 @@
       "id": "R2",
       "name": "Computer",
       "hardware": "VM",
+      "software": "2",
       "parameters": {"memory": 1024},
       "slots": [
         {
-          "id": 0,
           "model": "Realtek",
           "editable": false,
           "parameters": {}}],

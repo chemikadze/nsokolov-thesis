@@ -3,6 +3,7 @@
     "VM": {
       "id": "VM",
       "name": "Virtual Machine",
+      "platform": "VM",
       "metadata": {"pictogram": {"url": "/img/vm.png"}},
       "parameters": {
         "memory": {
@@ -17,9 +18,10 @@
           "model": "Realtek",
           "editable": false,
           "supported": ["Realtek"]}]},
-    "C2000": {
-      "id": "C2000",
+    "C2010": {
+      "id": "C2010",
       "name": "Cisco C2000",
+      "platform": "C2000",
       "metadata": {},
       "parameters": {},
       "software": [

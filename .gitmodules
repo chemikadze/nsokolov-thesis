@@ -1,0 +1,3 @@
+[submodule "nova-dynamips-driver"]
+	path = nova-dynamips-driver
+	url = git@github.com:project-ermak/nova-dynamips-driver.git

@@ -1,0 +1,67 @@
+{
+    "devices": [
+        {
+            "hardware": "c1.2691",
+            "id": "Router",
+            "metadata": {},
+            "name": "Router",
+            "parameters": {},
+            "slots": [
+                {
+                    "editable": false,
+                    "model": "GT96100-FE",
+                    "parameters": {}},
+                {
+                    "editable": true,
+                    "model": null,
+                    "parameters": {}}],
+            "software": "3d778050-6a7a-4380-af96-541e4984ad26"},
+        {
+            "hardware": "c1.2691",
+            "id": "Switch",
+            "metadata": {},
+            "name": "Switch",
+            "parameters": {},
+            "slots": [
+                {
+                    "editable": false, "model": "GT96100-FE", "parameters": {}},
+                {
+                    "editable": true, "model": "NM-16ESW", "parameters": {}}],
+            "software": "3d778050-6a7a-4380-af96-541e4984ad26"},
+        {
+            "hardware": "m1.small",
+            "id": "Qemu1",
+            "metadata": {},
+            "name": "Qemu1",
+            "parameters": {},
+            "slots": [
+                {
+                    "editable": true,
+                    "model": "e1000",
+                    "parameters": {}}],
+            "software": "dcccddeb-8f39-4ec9-bac9-6401bfcdeeab"},
+        {
+            "hardware": "m1.small",
+            "id": "Qemu2",
+            "metadata": {},
+            "name": "Qemu2",
+            "parameters": {},
+            "slots": [
+                {
+                    "editable": true,
+                    "model": "e1000",
+                    "parameters": {}}],
+            "software": "dcccddeb-8f39-4ec9-bac9-6401bfcdeeab"}],
+    "wires": [
+        {
+            "id": "Router_0_0-Switch_1_0",
+            "left":  { "device": "Router", "slot": 0, "port": 0 },
+            "right": { "device": "Switch", "slot": 0, "port": 0 }},
+        {
+            "id": "Qemu1_0_0-Switch_1_1",
+            "left":  { "device": "Qemu1",  "slot": 0, "port": 0 },
+            "right": { "device": "Switch", "slot": 1, "port": 1 }},
+        {
+            "id": "Qemu2_0_0-Switch_1_2",
+            "left":  { "device": "Qemu2",  "slot": 0, "port": 0 },
+            "right": { "device": "Switch", "slot": 1, "port": 2 }}]}

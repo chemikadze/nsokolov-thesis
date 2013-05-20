@@ -12,6 +12,7 @@
         "id": {"type": "string", "required": true},
         "name": {"type": "string", "required": true},
         "metadata": {"type": "object", "required": true},
+        "platform": {"type": "string", "required": true},
         "software": {
           "type": "array",
           "required": true,

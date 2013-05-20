@@ -23,7 +23,7 @@ colorlinks=true % цветные гиперссылки
 \ifpdf\usepackage{epstopdf}\fi
 
 % Номера страниц снизу и по центру
-%\pagestyle{footcenter}
+\pagestyle{footright}
 %\chapterpagestyle{footcenter}
 
 % Точка с запятой в качестве разделителя между номерами цитирований
@@ -35,13 +35,29 @@ colorlinks=true % цветные гиперссылки
 % Включать подсекции в оглавление
 \setcounter{tocdepth}{2}
 
+\renewcommand{\thechapterfont}{\normalfont\bfseries}
+\renewcommand{\chapterfont}{\normalfont\bfseries}
+\renewcommand\theappendixalign{\raggedleft}
+%\renewcommand\appendixalign{\raggedleft}
+%\renewcommand{\afterappendix}{\newpage}
+\renewcommand{\theappendixfont}{\normalfont\bfseries}
+\renewcommand{\appendixfont}{\normalfont\bfseries}
+
+\renewcommand{\theappendix}{\arabic{chapter}}
+
+%\titleformat{\chapter}[display]
+%    {\filcenter}
+%    {\MakeUppercase{\chaptertitlename} \thechapter}
+%    {14pt}
+%    {\bfseries}{}
+
 %----------------------------------------------------------------
 \begin{document}
 
 \lstset{breaklines=true,
            basicstyle=\ttfamily\footnotesize,
            numbers=left,
-           frame=shadowbox}
+           frame=shadowbo}
 
 %
 % Титульный лист на русском языке
@@ -102,5 +118,7 @@ colorlinks=true % цветные гиперссылки
 % Список литературы
 \bibliography{thesis}
 \bibliographystyle{gost705}
+
+\input{appendix}
 
 \end{document}
